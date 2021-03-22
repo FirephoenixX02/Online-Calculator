@@ -18,6 +18,8 @@ class Calculator {
     this.currentOperant = this.currentOperant + number;
   }
 
+  //FIXME: Word undefined before Operant
+
   chooseOperation(operation) {
     if (this.currentOperant === "") return;
     if (this.currentOperant !== "") {
