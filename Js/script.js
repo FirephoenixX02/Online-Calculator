@@ -59,19 +59,20 @@ class Calculator {
   }
 
   getDisplayNumber(number) {
-    const stringNumber = number.toString()
-    const integerDigits = parseFloat(stringNumber.split('.')[0])
-    const decimalDigits = stringNumber.split('.')[1]
-    const floatNumber = parseFloat(number)
-    if (isNaN(floatNumber)) return ''
-    return floatNumber.toLocaleString('en')
+    const stringNumber = number.toString();
+    const integerDigits = parseFloat(stringNumber.split(".")[0]);
+    const decimalDigits = stringNumber.split(".")[1];
+    const floatNumber = parseFloat(number);
+    if (isNaN(floatNumber)) return "";
+    return floatNumber.toLocaleString("en");
   }
 
   updateDisplay() {
     this.currentOperantTextElement.innerText = this.currentOperant;
     if (this.operation != null) {
-      this.previousOperantTextElement.innerText =
-       `${this.getDisplayNumber(this.previousOperant)} ${this.operation}`;
+      this.previousOperantTextElement.innerText = `${this.getDisplayNumber(
+        this.previousOperant
+      )} ${this.operation}`;
     }
   }
 }
@@ -125,4 +126,3 @@ deleteButton.addEventListener("click", (button) => {
   calculator.delete();
   calculator.updateDisplay();
 });
- 
