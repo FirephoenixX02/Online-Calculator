@@ -8,7 +8,7 @@ class Calculator {
   clear() {
     this.previousOperantTextElement = "";
     this.currentOperantTextElement = "";
-    this.operation = undefined;
+    this.operation = ;
   }
 
   delete() {
