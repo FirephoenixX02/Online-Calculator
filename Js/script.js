@@ -17,14 +17,17 @@ class Calculator {
 
   appendNumber(number) {
     if (number === "." && this.currentOperant.includes(".")) {
-      return;}
+      return;
+    }
     this.currentOperant = this.currentOperant + number;
   }
 
   //FIXME: Word undefined before Operant
 
   chooseOperation(operation) {
-    if (this.currentOperant === "") return;
+    if (this.currentOperant === "") {
+      return;
+    }
     if (this.currentOperant !== "") {
       this.compute();
     }
@@ -37,7 +40,9 @@ class Calculator {
     let computation;
     const prev = parseFloat(this.previousOperant);
     const current = parseFloat(this.currentOperant);
-    if (isNaN(prev) || isNaN(current)) return;
+    if (isNaN(prev) || isNaN(current)) {
+      return;
+    }
     switch (this.operation) {
       case "+":
         computation = prev + current;
@@ -64,7 +69,9 @@ class Calculator {
     const integerDigits = parseFloat(stringNumber.split(".")[0]);
     const decimalDigits = stringNumber.split(".")[1];
     const floatNumber = parseFloat(number);
-    if (isNaN(floatNumber)) return "";
+    if (isNaN(floatNumber)) {
+      return "";
+    }
     return floatNumber.toLocaleString("en");
   }
 
