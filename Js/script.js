@@ -60,7 +60,7 @@ class Calculator {
         return;
     }
     this.currentOperant = computation;
-    this.operation = undefined;
+    this.operation = "undefined";
     this.previousOperant = "";
   }
 
